@@ -10,10 +10,15 @@ public class Calculator {
         String exp = scn.nextLine();
         int actionIndex=-1;
 
-        for (int i = 0; i < actions.length; i++) {
-            if(exp.contains(actions[i])){
-                exp.contains(actions[i]);
-                actionIndex++;
+        for (int i = 0; i < exp.length(); i++) {
+            try {
+                if(exp.contains(actions[i])){
+                    //exp.contains(actions[i]);
+                    actionIndex++;
+                }
+            }catch (Exception e){
+             System.out.println("т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+             return;
             }
         }
         if(actionIndex==-1){
