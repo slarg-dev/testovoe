@@ -24,19 +24,19 @@ public class Calculator {
                 break;
             }
         }
-        check = exp.length() - exp.replace(actions[actionIndex], "").length();
-        if (check > 1) {
-            System.out.println("Error: т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-            return;
-        }
 
-            System.out.println(actionIndex);
+
+
             if (actionIndex == -1) {
                 System.out.println("Неверный формат: некорректное выражение");
             } else {
                 String[] data = exp.split(regexActions[actionIndex]);
-                System.out.println(data[0]);
                 try {
+                    check = exp.length() - exp.replace(actions[actionIndex], "").length();
+                    if (check > 1) {
+                        System.out.println("Error: т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+                        return;
+                    }
                     if (converter.isRoman(data[0]) == converter.isRoman(data[1])) {
 
                         boolean isRoman = converter.isRoman(data[0]);

@@ -34,7 +34,6 @@ public class Converter {
 
     public String intToRoman(int number) {
         String roman = "";
-        System.out.println(number);
         try {
             do {
                 int arabianKey = (Integer)this.arabianKeyMap.floorKey(number);
@@ -42,8 +41,7 @@ public class Converter {
                 number -= arabianKey;
             } while(number != 0);
         } catch (Exception var5) {
-            System.out.println("в римской системе нет отрицательных чисел");
-            roman = "Error";
+            System.out.println("Error: в римской системе нет отрицательных чисел и нуля");
         }
 
         return roman;
