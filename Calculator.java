@@ -9,15 +9,11 @@ public class Calculator {
         System.out.print("Введите выражение: ");
         String exp = scn.nextLine();
         int actionIndex=-1;
-        if(exp.length() > 3) {
-            System.out.println("Неверный формат: формат должен быть примерно таким: I+I");
-            return;
-        }
+
         for (int i = 0; i < actions.length; i++) {
             if(exp.contains(actions[i])){
                 exp.contains(actions[i]);
-                actionIndex = i;
-                break;
+                actionIndex++;
             }
         }
         if(actionIndex==-1){
