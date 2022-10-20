@@ -54,7 +54,7 @@ public class Calculator {
                         case "+" -> a + b;
                         case "-" -> a - b;
                         case "*" -> a * b;
-                        case "/" -> a / b;
+                        default -> a / b;
                     };
 
                     if (isRoman) {
@@ -74,4 +74,59 @@ public class Calculator {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
